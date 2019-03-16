@@ -1,0 +1,183 @@
+2019-03-02 11:07:24,724 [MainThread  ] [WARNI]  Отсутствует локальный файл настроек. Файл создан из шаблона local_settings.py.tmpl
+2019-03-02 11:07:36,337 [MainThread  ] [ERROR]  could not translate host name "team2018.piterdata.ninja" to address: Unknown host
+Traceback (most recent call last):
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 2661, in connect
+    self._state.set_connection(self._connect())
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 3299, in _connect
+    conn = psycopg2.connect(database=self.database, **self.connect_params)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\psycopg2\__init__.py", line 130, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "team2018.piterdata.ninja" to address: Unknown host
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 2712, in execute_sql
+    cursor = self.cursor(commit)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 2698, in cursor
+    self.connect()
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 2662, in connect
+    self._initialize_connection(self._state.conn)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 2512, in __exit__
+    reraise(new_type, new_type(*exc_args), traceback)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 186, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 2661, in connect
+    self._state.set_connection(self._connect())
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 3299, in _connect
+    conn = psycopg2.connect(database=self.database, **self.connect_params)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\psycopg2\__init__.py", line 130, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+peewee.OperationalError: could not translate host name "team2018.piterdata.ninja" to address: Unknown host
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:/Users/Kuruma/PycharmProjects/ls_source/run.py", line 40, in <module>
+    from application import APP
+  File "C:\Users\Kuruma\PycharmProjects\ls_source\application.py", line 23, in <module>
+    init_models(DB)
+  File "C:\Users\Kuruma\PycharmProjects\ls_source\models\__init__.py", line 13, in init_models
+    db.database.create_tables(ms)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 2871, in create_tables
+    model.create_table(**options)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 5842, in create_table
+    and cls.table_exists():
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 5832, in table_exists
+    return cls._schema.database.table_exists(M.table.__name__, M.schema)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 2849, in table_exists
+    return table_name in self.get_tables(schema=schema)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 3323, in get_tables
+    cursor = self.execute_sql(query, (schema or 'public',))
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 2721, in execute_sql
+    self.commit()
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 2512, in __exit__
+    reraise(new_type, new_type(*exc_args), traceback)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 186, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 2712, in execute_sql
+    cursor = self.cursor(commit)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 2698, in cursor
+    self.connect()
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 2662, in connect
+    self._initialize_connection(self._state.conn)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 2512, in __exit__
+    reraise(new_type, new_type(*exc_args), traceback)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 186, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 2661, in connect
+    self._state.set_connection(self._connect())
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 3299, in _connect
+    conn = psycopg2.connect(database=self.database, **self.connect_params)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\psycopg2\__init__.py", line 130, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+peewee.OperationalError: could not translate host name "team2018.piterdata.ninja" to address: Unknown host
+
+2019-03-02 11:10:13,631 [MainThread  ] [ERROR]  FATAL:  password authentication failed for user "rhinrei"
+FATAL:  password authentication failed for user "rhinrei"
+Traceback (most recent call last):
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 2661, in connect
+    self._state.set_connection(self._connect())
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 3299, in _connect
+    conn = psycopg2.connect(database=self.database, **self.connect_params)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\psycopg2\__init__.py", line 130, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: FATAL:  password authentication failed for user "rhinrei"
+FATAL:  password authentication failed for user "rhinrei"
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 2712, in execute_sql
+    cursor = self.cursor(commit)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 2698, in cursor
+    self.connect()
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 2662, in connect
+    self._initialize_connection(self._state.conn)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 2512, in __exit__
+    reraise(new_type, new_type(*exc_args), traceback)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 186, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 2661, in connect
+    self._state.set_connection(self._connect())
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 3299, in _connect
+    conn = psycopg2.connect(database=self.database, **self.connect_params)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\psycopg2\__init__.py", line 130, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+peewee.OperationalError: FATAL:  password authentication failed for user "rhinrei"
+FATAL:  password authentication failed for user "rhinrei"
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:/Users/Kuruma/PycharmProjects/ls_source/run.py", line 40, in <module>
+    from application import APP
+  File "C:\Users\Kuruma\PycharmProjects\ls_source\application.py", line 23, in <module>
+    init_models(DB)
+  File "C:\Users\Kuruma\PycharmProjects\ls_source\models\__init__.py", line 13, in init_models
+    db.database.create_tables(ms)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 2871, in create_tables
+    model.create_table(**options)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 5842, in create_table
+    and cls.table_exists():
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 5832, in table_exists
+    return cls._schema.database.table_exists(M.table.__name__, M.schema)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 2849, in table_exists
+    return table_name in self.get_tables(schema=schema)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 3323, in get_tables
+    cursor = self.execute_sql(query, (schema or 'public',))
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 2721, in execute_sql
+    self.commit()
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 2512, in __exit__
+    reraise(new_type, new_type(*exc_args), traceback)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 186, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 2712, in execute_sql
+    cursor = self.cursor(commit)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 2698, in cursor
+    self.connect()
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 2662, in connect
+    self._initialize_connection(self._state.conn)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 2512, in __exit__
+    reraise(new_type, new_type(*exc_args), traceback)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 186, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 2661, in connect
+    self._state.set_connection(self._connect())
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\peewee.py", line 3299, in _connect
+    conn = psycopg2.connect(database=self.database, **self.connect_params)
+  File "C:\Users\Kuruma\AppData\Local\Programs\Python\Python36-32\lib\site-packages\psycopg2\__init__.py", line 130, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+peewee.OperationalError: FATAL:  password authentication failed for user "rhinrei"
+FATAL:  password authentication failed for user "rhinrei"
+
+2019-03-02 11:11:54,835 [MainThread  ] [WARNI]   * Debugger is active!
+2019-03-02 12:47:21,012 [MainThread  ] [WARNI]   * Debugger is active!
+2019-03-02 12:50:57,636 [MainThread  ] [WARNI]   * Debugger is active!
+2019-03-02 12:54:32,026 [MainThread  ] [ERROR]  name 'Category' is not defined
+Traceback (most recent call last):
+  File "C:/Users/Kuruma/PycharmProjects/ls_source/run.py", line 40, in <module>
+    from application import APP
+  File "C:\Users\Kuruma\PycharmProjects\ls_source\application.py", line 23, in <module>
+    init_models(DB)
+  File "C:\Users\Kuruma\PycharmProjects\ls_source\models\__init__.py", line 19, in init_models
+    ms1 = [Category, Product, Customer, Order, OrderItem]
+NameError: name 'Category' is not defined
+2019-03-02 12:55:34,138 [MainThread  ] [WARNI]   * Debugger is active!
+2019-03-02 12:57:45,291 [MainThread  ] [WARNI]   * Debugger is active!
+2019-03-02 12:58:53,368 [MainThread  ] [WARNI]   * Debugger is active!
+2019-03-14 23:29:11,241 [MainThread  ] [WARNI]   * Debugger is active!
+2019-03-14 23:31:16,507 [MainThread  ] [WARNI]   * Debugger is active!
+2019-03-14 23:36:09,680 [MainThread  ] [ERROR]  name 'Specialization' is not defined
+Traceback (most recent call last):
+  File "/home/galina/Downloads/ls_source/run.py", line 40, in <module>
+    from application import APP
+  File "/home/galina/Downloads/ls_source/application.py", line 23, in <module>
+    init_models(DB)
+  File "/home/galina/Downloads/ls_source/models/__init__.py", line 13, in init_models
+    ms = [Category, Product, Customer, Order, OrderItem, Customer, Specialization]
+NameError: name 'Specialization' is not defined
