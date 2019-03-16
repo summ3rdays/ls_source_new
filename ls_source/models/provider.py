@@ -6,7 +6,7 @@ from application import DB
 
 class Provider(DB.Model):
 
-    id = PrimaryKeyField()
+    prov_id = PrimaryKeyField()
     name = CharField(50, null=False)
     email = CharField(30)
     phone = CharField(21)

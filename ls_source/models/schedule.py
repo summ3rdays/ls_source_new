@@ -7,8 +7,8 @@ from models.course import Course
 
 class Schedule(DB.Model):
 
-    id = PrimaryKeyField()
-    c_id = ForeignKeyField(Course, to_field='id', null=False)
+    sch_id = PrimaryKeyField()
+    course_id = ForeignKeyField(Course, to_field='course_id', null=False)
     start_date = DateTimeField(default=datetime.now, null=False)
     end_date = DateTimeField(default=None)
 

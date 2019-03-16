@@ -8,8 +8,8 @@ from models.course import Course
 
 class Subscription(DB.Model):
     id = PrimaryKeyField()
-    s_id = ForeignKeyField(Student, to_field='id', null=False, on_delete='CASCADE')
-    c_id = ForeignKeyField(Course, to_field='id', null=False)
+    student_id = ForeignKeyField(Student, to_field='student_id', null=False, on_delete='CASCADE')
+    course_id = ForeignKeyField(Course, to_field='course_id', null=False)
     start_date = DateTimeField(default=datetime.now, null=False)
     end_date = DateTimeField(default=None)
 

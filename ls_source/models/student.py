@@ -6,14 +6,14 @@ from application import DB
 
 class Student(DB.Model):
 
-    s_id = PrimaryKeyField()
-    s_first_name = CharField(50, null=False)
-    s_last_name = CharField(50, null=False)
-    s_email = CharField(unique=True, null=False)
-    s_phone = CharField(21, unique=True, null=False)
-    s_birthday = DateField(null=True)
-    s_creation_date = DateTimeField(default=datetime.now, null=False)
-    s_is_active = BooleanField(default=True)
+    student_id = PrimaryKeyField()
+    first_name = CharField(50, null=False)
+    last_name = CharField(50, null=False)
+    email = CharField(unique=True, null=False)
+    phone = CharField(21, unique=True, null=False)
+    birthday = DateField(null=True)
+    creation_date = DateTimeField(default=datetime.now, null=False)
+    is_active = BooleanField(default=True)
 
     class Meta:
         table_name = 'students'
